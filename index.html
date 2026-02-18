@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time in Seconds</title>
+
+    <style>
+        /* ---------------------------
+   Windows-like clean theme
+--------------------------- */
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0078D7, #00A4EF);
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        /* Header styling */
+        header {
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            opacity: 0.9;
+        }
+
+        /* Digital seconds display */
+        #secondsDisplay {
+            font-family: "Consolas", monospace;
+            font-weight: bold;
+            letter-spacing: 3px;
+            background: rgba(0, 0, 0, 0.25);
+            padding: 30px 50px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+            font-size: clamp(3rem, 10vw, 7rem);
+            /* Responsive scaling */
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Time</h1>
+        <p>Displays the current time of the day in seconds</p>
+    </header>
+
+    <div id="secondsDisplay">0</div>
+
+    <script>
+        /* -------------------------------------------------
+           Function: Calculate seconds elapsed since midnight
+        --------------------------------------------------*/
+        function updateSeconds() {
+
+            const now = new Date();
+
+            // Seconds since midnight
+            const seconds =
+                now.getHours() * 3600 +
+                now.getMinutes() * 60 +
+                now.getSeconds();
+
+            // Display
+            document.getElementById("secondsDisplay").textContent = seconds;
+        }
+
+        /* Update immediately */
+        updateSeconds();
+
+        /* Update every second */
+        setInterval(updateSeconds, 1000);
+    </script>
+
+</body>
+
+</html>
