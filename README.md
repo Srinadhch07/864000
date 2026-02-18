@@ -1,4 +1,5 @@
 # 86,400 Seconds
+#### Productivity
 ### Change how you see time.
 
 > “We all say we don't have enough time — yet every day gives us 86,400 seconds.”
@@ -36,4 +37,9 @@ The design is intentionally minimal, clean, and focused — allowing the viewer 
 
 ## How It Works
 The application calculates the elapsed time using:
+## Usage
+[Click here](https://srinadhch07.github.io/864000/)
+1. Open the page
+2. Click on top right corner 3-dots
+3. Add to home screen.
 
